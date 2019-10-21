@@ -1,0 +1,41 @@
+/*@font-face {
+    font-family: THsarabun;      
+    src: url(fonts/THSarabun.ttf);
+  }
+  @font-face {
+    font-family: Ekkamai;      
+    src: url(fonts/EkkamaiNew-Regular.ttf);
+  }*/
+  @font-face {
+    font-family: Serithai;      
+    src: url(fonts/Serithai-Regular.ttf);
+  }
+  body {
+    font-family: Serithai;    
+  }
+  label{
+    color:#000000;
+    font-weight: 600;
+  }
+  .line-bottom{    
+    width: 100%;
+    border-bottom: 2px solid #ff8000;
+    margin: 0 auto;
+  }
+  .my-text{
+    text-decoration: underline;
+    font-size: medium;
+    font-weight: bold;
+  }
+  table, th, td {
+    border: 1px solid black;
+  }
+  .text-dark {
+    color: #dc3545!important;
+}
+.my-box-date > input{
+  width: 40px;
+}
+.my-box-month > input{
+  width: 60px;
+}
