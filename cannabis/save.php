@@ -3,11 +3,12 @@ require 'dbconfig.php';
 
 $data = json_decode(json_encode($_POST));
 
+
 $sql        = 'SELECT count(*) AS total FROM cannabis WHERE screening = "'.$data->screening.'"';
 $query      = mysqli_query($conn_db, $sql);
 $result     = mysqli_fetch_object($query);
 //echo $result->total;
-if($result->total > 5){
+if($result->total > 20){
     http_response_code(400);
     exit(json_encode(['message'=>'วันที่ประสงค์เข้าคัดกรอง เต็ม 200 คนแล้ว กรุณาเลือกวันใหม่']));
 }

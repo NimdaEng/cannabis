@@ -192,15 +192,25 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 
   <script type="text/javascript">
   $( document ).ready(function() {
       $("form").submit(function(event){     
-        let field = $( this ).serializeArray();
-        console.log(field);
-        jQuery.each(field, function(i, field){
-          
+        let field = $( this ).serializeArray();        
+        let obj = {};
+        jQuery.each(field, function(i, item){
+          if (obj[item.name] === undefined) { // New
+            obj[item.name] = item.value || '';
+          } else {                            // Existing
+              if (!obj[item.name].push) {
+                  obj[item.name] = [obj[item.name]];
+              }
+              obj[item.name].push(item.value || '');
+          }
         });   
+
+        //console.log(obj);
 
         jQuery.ajax({
           cache: false,
@@ -214,6 +224,12 @@
           },
           error:function(data){
             console.log(data.responseJSON.message);
+            Swal.fire({
+              title: 'Error!',
+              text: data.responseJSON.message,
+              type: 'error',
+              confirmButtonText: 'Close'
+          });
           }
         }); 
         event.preventDefault();
