@@ -11,7 +11,7 @@
 </html>
 <body>
 <div class="container"> 
-<div class="jumbotron">
+<div class="jumbotron d-none">
   <h1 class="display-4">ลงทะเบียนเข้าร่วม โครงการวิจัยน้ำมันกัญชา</h1>
   <p class="lead">อ.เดชา ศิริภัทร</p>
   <hr class="my-5">
@@ -101,26 +101,36 @@
 <div class="col-md-6 col-sm-6">
 <form>
   <div class="form-group">
-    <label for="fristname">ชื่อ</label>
-    <input type="text" class="form-control" id="fristname" placeholder="กรอกชื่อ">    
+    <label for="firstname">ชื่อ</label>
+    <input type="text" class="form-control" id="firstname" name="firstname" placeholder="กรอกชื่อ" required  value="ทดสอบชื่อ">    
   </div>
   <div class="form-group">
     <label for="lastname">นามสกุล</label>
-    <input type="text" class="form-control" id="lastname" placeholder="นามสกุล">
+    <input type="text" class="form-control" id="lastname" name="lastname" placeholder="นามสกุล" required value="ทดสอบนามสกุล">
   </div>
   <div class="form-group">
     <label for="lastname">บัตรประชาชน</label>
-    <input type="text" class="form-control" id="cid" maxlength="13" placeholder="เลขบัตรประชาชน 13 หลัก">
+    <input type="text" class="form-control" id="cid" name="cid" value="1111111111119"
+    maxlength="13" pattern="[0-9]{13}" title="โปรดกรอกรูปแบบของบัตรประชาชน" 
+    placeholder="เลขบัตรประชาชน 13 หลัก" required>
   </div>
   <div class="form-group">
     <label for="lastname">วันเดือนปีเกิด (เป็นตัวเลข)</label>
     <div class="my-box-date">
       วัน
-    <input type="text" id="day" min="1" max="31" maxlength="2">
+    <input type="number" id="day" name="day" min="1" max="31" maxlength="2" required value="5"
+      data-container="body" data-toggle="popover" data-placement="top" 
+      data-content="กรุณากรอก 1-31 เท่านั้น">
       เดือน
-    <input type="text" id="month" min="1" max="12" maxlength="2">
+    <input type="number" id="month" name="month" min="1" max="12" maxlength="2" required value="1"
+      data-container="body" data-toggle="popover" data-placement="top" 
+      data-content="กรุณากรอก 1-12 เท่านั้น">
       พ.ศ.
-    <input type="text" style="width:70px" id="year" min="2464" max="2537" maxlength="4">
+    <input type="number" style="width:70px" id="year" name="year" min="2464" max="2537" maxlength="4" required value="2525"
+      data-container="body" data-toggle="popover" data-placement="top" 
+      data-content="ช่วง พ.ศ. 2464 - 2537 เท่านั้น">
+
+    <label id="age" class="text-success"></label>
     </div>
   </div>
 
@@ -128,11 +138,11 @@
   <b>โรคประจำตัว ผู้ป่วย 4 กลุ่มโรค ดังนี้</b>  
   
   <div class="form-group form-check">
-    <input type="radio" class="form-check-input" id="Cancer" value="โรคมะเร็งทุกชนิด / ทุกระยะ (Cancer)" name="disease">
+    <input type="radio" class="form-check-input" id="Cancer" value="โรคมะเร็งทุกชนิด / ทุกระยะ (Cancer)" name="disease"required>
     <label class="form-check-label text-dark" for="Cancer">โรคมะเร็งทุกชนิด / ทุกระยะ (Cancer)</label>
   </div>
   <div class="form-group form-check">
-    <input type="radio" class="form-check-input" id="Epilepsy" value="โรคลมชัก(Epilepsy)" name="disease">
+    <input type="radio" class="form-check-input" id="Epilepsy" value="โรคลมชัก(Epilepsy)" name="disease"required>
     <label class="form-check-label text-dark" for="Epilepsy">โรคลมชัก(Epilepsy) </label>
   </div>
   <div class="form-group form-check">
@@ -142,7 +152,7 @@
     </label>
   </div>
   <div class="form-group form-check">
-    <input type="radio" class="form-check-input" id="Parkinson" value="พาร์กินสัน (Parkinson’s disease)" name="disease">
+    <input type="radio" class="form-check-input" id="Parkinson" value="พาร์กินสัน (Parkinson’s disease)" name="disease"required checked="checked">
     <label class="form-check-label text-dark" for="Parkinson">พาร์กินสัน (Parkinson’s disease)</label>
   </div>  
  
@@ -151,39 +161,64 @@
   <hr class="my-4"> 
   <b>วันที่ประสงค์เข้าคัดกรอง</b>   
   <div class="form-group form-check">
-    <input type="radio" class="form-check-input" id="screening1" value="2019-11-4" name="screening">
-    <label class="form-check-label text-dark" for="screening1">วันที่ 4 พฤศจิกายน 2562</label>
+    <input type="radio" class="form-check-input" id="screening1" value="2019-11-4" name="screening" required checked="checked">
+    <label class="form-check-label text-dark" for="screening1">วันที่ 4 พฤศจิกายน 2562 <i id="4" class="text-danger"></i></label>
   </div>
   <div class="form-group form-check">
-    <input type="radio" class="form-check-input" id="screening2" value="2019-11-5" name="screening">
-    <label class="form-check-label text-dark" for="screening2">วันที่ 5 พฤศจิกายน 2562</label>
+    <input type="radio" class="form-check-input" id="screening2" value="2019-11-5" name="screening" required>
+    <label class="form-check-label text-dark" for="screening2">วันที่ 5 พฤศจิกายน 2562 <i id="5" class="text-danger"></i></label>
   </div>
   <div class="form-group form-check">
-    <input type="radio" class="form-check-input" id="screening3" value="2019-11-6" name="screening">
-    <label class="form-check-label text-dark" for="screening3">วันที่ 6 พฤศจิกายน 2562</label>
+    <input type="radio" class="form-check-input" id="screening3" value="2019-11-6" name="screening" required>
+    <label class="form-check-label text-dark" for="screening3">วันที่ 6 พฤศจิกายน 2562 <i id="6" class="text-danger"></i></label>
   </div>
   <div class="form-group form-check">
-    <input type="radio" class="form-check-input" id="screening4" value="2019-11-7" name="screening">
-    <label class="form-check-label text-dark" for="screening4">วันที่ 7 พฤศจิกายน 2562</label>
+    <input type="radio" class="form-check-input" id="screening4" value="2019-11-7" name="screening" required>
+    <label class="form-check-label text-dark" for="screening4">วันที่ 7 พฤศจิกายน 2562 <i id="7" class="text-danger"></i></label>
   </div>
   <div class="form-group form-check">
-    <input type="radio" class="form-check-input" id="screening5" value="2019-11-8" name="screening">
-    <label class="form-check-label text-dark" for="screening5">วันที่ 8 พฤศจิกายน 2562</label>
+    <input type="radio" class="form-check-input" id="screening5" value="2019-11-8" name="screening" required>
+    <label class="form-check-label text-dark" for="screening5">วันที่ 8 พฤศจิกายน 2562 <i id="8" class="text-danger"></i></label>
   </div> 
   <!-- end -->
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+<br><br>
 
-</div>
-</div>
+
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
 
   <script type="text/javascript">
   $( document ).ready(function() {
+      $("form").submit(function(event){     
+        let field = $( this ).serializeArray();
+        console.log(field);
+        jQuery.each(field, function(i, field){
+          
+        });   
+
+        jQuery.ajax({
+          cache: false,
+          url: "save.php",
+          data: field,
+          dataType: "json",
+          type:"POST",
+          //contentType: "application/json; charset=utf-8",
+          success: function(data){
+            console.log(data);
+          },
+          error:function(data){
+            console.log(data.responseJSON.message);
+          }
+        }); 
+        event.preventDefault();
+      });
+
       $("#cid").keyup(function(){
         if($(this).val().length == 13){
           //console.log($(this).val());
@@ -191,8 +226,7 @@
           let sum = 0;
           for(i=0; i < 12; i++){
             sum += parseFloat(id.charAt(i))*(13-i);
-          }
-          
+          }          
           if((11-(sum%11))%10 !== parseFloat(id.charAt(12))){
               //ถ้าเลขบัตรประชาชนไม่ถูก border: 1px solid #dc3545;
               $(this).css("border","2px solid #dc3545");
@@ -201,22 +235,95 @@
             }
         }
       });
+
+      let day = "";
+      let month = "";      
+
+      $("#day").keyup(function(){
+        let val = $(this).val();
+        if(val > 31 || val === '0'){
+          $(this).val('');
+          $($(this).popover('toggle'));
+        }else{
+          $($(this).popover('hide'));
+          day = $(this).val();
+        }
+      });
+
+      $("#month").keyup(function(){
+        let val = $(this).val();
+        if(val > 12 || val === '0'){
+          $(this).val('');
+          $($(this).popover('toggle'));
+        }else{
+          $($(this).popover('hide'));
+          month = $(this).val();
+        }
+      });
+      $("#year").keyup(function(){ //2537,2464
+        let val = $(this).val();
+        if(val.length > 4 || val === '0') $(this).val('');
+        if(!((val >= $(this).attr('min')) && (val <= $(this).attr('max')))){          
+          $($(this).popover('toggle'));
+        }else{          
+          $($(this).popover('hide'));          
+            let age = new Date($(this).val() - 543, month, day);          
+            $('#age').text(getAge(age));          
+        }
+      });
   });
 
-  function checkID(id)
-    {
-    if(id.length != 13) return false;
-    for(i=0, sum=0; i < 12; i++)
-    sum += parseFloat(id.charAt(i))*(13-i); 
-    if((11-sum%11)%10!=parseFloat(id.charAt(12)))
-    return false; 
-    return true;
-    }
+  function getAge(dateString) {
+    var today = new Date();
+    var DOB = new Date(dateString);
+    var totalMonths = (today.getFullYear() - DOB.getFullYear()) * 12 + today.getMonth() - DOB.getMonth();
+    totalMonths += today.getDay() < DOB.getDay() ? -1 : 0;
+    var years = today.getFullYear() - DOB.getFullYear();
+    if (DOB.getMonth() > today.getMonth())
+        years = years - 1;
+    else if (DOB.getMonth() === today.getMonth())
+        if (DOB.getDate() > today.getDate())
+            years = years - 1;
 
-    function checkForm()
-    { if(!checkID(document.form1.txtID.value))
-    alert('รหัสประชาชนไม่ถูกต้อง');
-    else alert('รหัสประชาชนถูกต้อง เชิญผ่านได้');}
+    var days;
+    var months;
+
+    if (DOB.getDate() > today.getDate()) {
+        months = (totalMonths % 12);
+        if (months == 0)
+            months = 11;
+        var x = today.getMonth();
+        switch (x) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12: {
+                var a = DOB.getDate() - today.getDate();
+                days = 31 - a;
+                break;
+            }
+            default: {
+                var a = DOB.getDate() - today.getDate();
+                days = 30 - a;
+                break;
+            }
+        }
+
+    }
+    else {
+        days = today.getDate() - DOB.getDate();
+        if (DOB.getMonth() === today.getMonth())
+            months = (totalMonths % 12);
+        else
+            months = (totalMonths % 12) + 1;
+    }
+    var age = years + ' ปี ' + months + ' เดือน ' + days + ' วัน';
+    return age;
+}
+
 </script>
 
 </body>
