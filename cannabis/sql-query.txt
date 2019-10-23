@@ -1,0 +1,30 @@
+SET @row_number = 0; 
+SELECT (@row_number:=@row_number + 1) AS queue, cannabis.* FROM cannabis WHERE screening ='2019-11-4' ORDER BY create_at;
+
+SELECT 
+	ROW_NUMBER() OVER (
+        ORDER BY create_at
+    ) queue,
+		cannabis.*
+FROM cannabis
+WHERE screening ='2019-11-4' 
+ORDER BY create_at;
+
+
+/**********************************/
+
+SELECT 
+q.queue,
+pt.*
+FROM cannabis AS pt
+INNER JOIN(
+SELECT 
+	ROW_NUMBER() OVER (
+        ORDER BY create_at
+    ) queue,
+		cannabis.id
+FROM cannabis
+WHERE screening ='2019-11-4'
+ORDER BY create_at) AS q 
+ON q.id = pt.id
+WHERE pt.cid ='1111111111112'
