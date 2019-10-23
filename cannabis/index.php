@@ -11,9 +11,9 @@
 </html>
 <body>
 <div class="container"> 
-<div class="jumbotron d-none">
-  <h1 class="display-4">ลงทะเบียนเข้าร่วม โครงการวิจัยน้ำมันกัญชา</h1>
-  <p class="lead">อ.เดชา ศิริภัทร</p>
+<div class="jumbotron">
+  <h1 class="display-4">ลงทะเบียนเข้าร่วม โครงการวิจัยน้ำมันกัญชา <b class="text-danger">เฟสที่ 1</b> อ.เดชา ศิริภัทร</h1>
+  <p class="lead">โรงพยาบาลสมเด็จพระยุพราชเดชอุดม</p>
   <hr class="my-5">
     <ul>
       <li>
@@ -28,21 +28,20 @@
       ผู้เข้าร่วมโครงการ ยินดีให้ข้อมูลแก่ ผู้รับผิดชอบ งานวิจัย ตามความเป็นจริง
       </li>
       <li>
-      ผู้เข้าร่วมวิจัย <strong class="text-danger my-text">*ต้องมารับบริการด้วยตนเอง ทุกครั้ง *</strong> โดย กำหนด การมาพบแพทย์  4 ครั้ง 
-      (ครั้งที่ 1 วันรับการรักษา/ครั้งที่ 2 นัด 3 เดือน / ครั้งที่ 3 นัด 2 เดือน / ครั้งที่ 4 นัด 3 เดือน )
+      ผู้เข้าร่วมวิจัย <strong class="text-danger my-text">*ต้องมารับบริการด้วยตนเอง ทุกครั้ง *</strong> โดย กำหนด การมา "พบแพทย์ 5 ครั้ง : วันคัดกรอง, วันรับยาครั้งแรก, ติดตามการรักษา 1 เดือน, 2 เดือน, 3 เดือน"
       </li>
       <li>
-      ผู้เข้าร่วมงานวิจัย เป็น <strong class="text-danger my-text">ผู้มีภูมิลำเนา ในจังหวัดอุบลราชธานี </strong>
+      ผู้เข้าร่วมงานวิจัยเฟส 1 <strong class="text-danger my-text">ต้องเป็นผู้ที่มีภูมิลำเนาในจังหวัดอุบลราชธานี </strong>
       </li>
     </ul> 
     <hr class="my-4">
-    <h1 class="display-5">สิ่งที่ต้องนำมาด้วยในคัดกรอง</h1>    
+    <h1 class="display-5">สิ่งที่ต้องนำมาด้วยในคัดกรอง <b class="text-danger">(1 สำเนา)</b></h1>    
     <ol>
-      <li>บัตรประชาชนของผู้เข้าร่วมโครงการวิจัย</li>
-      <li>ทะเบียนบ้าน (ฉบับจริง หรือ สำเนา)</li>
-      <li>สำเนาประวัติ หรือ ข้อมูล ประวัติ การวินิจฉัยและรักษาในปัจจุบัน</li>
+      <li>บัตรประชาชนของผู้เข้าร่วมโครงการวิจัย </li>
+      <li>ทะเบียนบ้าน (ฉบับจริง หรือ สำเนา) </li>
+      <li>สำเนาประวัติ หรือ ข้อมูล ประวัติ การวินิจฉัยและรักษาในปัจจุบัน </li>
       <li>
-      ผลการตรวจทางห้องปฏิบัติการ ดังนี้  BUN, Cr, TP, Alb, TB, AST,  ALT, ALP, AFP <strong class="text-danger my-text">(ผลตรวจไม่เกิน 1 เดือน สามารถนำผลตรวจ มาจาก รพ.ใกล้บ้านได้)  
+      ผลการตรวจทางห้องปฏิบัติการ ดังนี้  BUN,Creatinine, total protein,Albumin, total bilirubin, AST, SLT, AFP <strong class="text-danger my-text">(ผลตรวจไม่เกิน 1 เดือน สามารถนำผลตรวจ มาจาก รพ.ใกล้บ้านได้)  
       *** ผู้เข้าร่วมโครงการฯ ในอำเภอเดชอุดม  ให้ขอรับการตรวจ ก่อนวันนัด  โดย มีค่าใช้จ่ายตามจริง (ชำระเงินเอง)</strong>
       </li>
       <li>ยาที่ใช้ในปัจจุบัน ทั้งแผนปัจจุบัน และ แผนไทย</li>
@@ -53,14 +52,13 @@
       <li>อาศัยหรือมีภูมิลำเนา ในจังหวัดอุบลราชธานี</li>
       <li>เพศชายหรือเพศหญิง   อายุตั้งแต่ 25 ปีขึ้นไป</li>
       <li>เป็นผู้ป่วยที่มีอาการหรือเป็นโรคที่แพทย์/แพทย์แผนไทย/แพทย์แผนไทยประยุกต์ ประจำโครงการฯ ของรพร.เดชอุดม กำหนดให้ใช้น้ำมันกัญชา อ.เดชา ได้ </li>
-      <li>มีการรับรู้และสติสัมปชัญญะดี สามารถสื่อสารความหหมายได้</li>
+      <li>มีการรับรู้และสติสัมปชัญญะดี สามารถสื่อสารความหมายได้</li>
       <li>ลงนามในใบยินยอมเร่วมโครงการ หลังได้รับการชี้แจ้งโครงการจากผู้วิจัย</li>
     </ul>
     
     <hr class="my-4"> 
     <h1 class="display-5">กำหนดการประชุม ในวันที่ 4 – 8 พฤศจิกายน 2562</h1>
-    <strong class="text-danger my-text">หมายเหตุ ผู้มีสิทธิเข้ารับการตรวจ ต้องผ่านขั้นตอน 
-                 ตั้งแต่เวลา 09.00 น. เท่านั้น
+    <strong class="text-danger my-text">หมายเหตุ ผู้มีสิทธิเข้ารับการตรวจ ต้องผ่านขั้นตอน ตั้งแต่เวลา 09.00 น. เท่านั้น
 </strong>
     <table >
       <tr>
@@ -88,7 +86,7 @@
    
     <div class="form-check mb-2 mr-sm-2">
     <label class="form-check-label">
-      <input class="form-check-input" type="checkbox"> ข้าพเจ้าได้อ่านครบถ้วนแล้ว
+      <input class="form-check-input" type="checkbox" id="accept"> ข้าพเจ้าได้อ่านครบถ้วนแล้ว
     </label>
   </div>
   <a class="btn btn-success btn-lg" href="#" role="button">อ่านแล้ว</a>
@@ -133,6 +131,12 @@
     <label id="age" class="text-success"></label>
     </div>
   </div>
+  <div class="form-group">
+    <label for="lastname">เบอร์โทร</label>
+    <input type="text" class="form-control" id="mobile" name="mobile" value="0813907061"
+    maxlength="10" pattern="[0-9]{10}" title="โปรดกรอกรูปแบบของบัตรประชาชน" 
+    placeholder="เบอร์โทร" required>
+  </div>
 
   <hr class="my-4"> 
   <b>โรคประจำตัว ผู้ป่วย 4 กลุ่มโรค ดังนี้</b>  
@@ -148,7 +152,7 @@
   <div class="form-group form-check">
     <input type="radio" class="form-check-input" id="migrain" value="โรคปวดจากปลายประสาท หรือ โรคที่มีอาการปวดรุนแรง เช่น ไมเกรน(migrain) ปลายประสาทใบหน้าอักเสบ (trigeminal nerve pain) เป็นต้น" name="disease">
     <label class="form-check-label text-dark" for="migrain">
-      โรคปวดจากปลายประสาท หรือ โรคที่มีอาการปวดรุนแรง เช่น ไมเกรน(migrain) ปลายประสาทใบหน้าอักเสบ (trigeminal nerve pain) เป็นต้น
+      โรคปวดจากปลายประสาท หรือ โรคที่มีอาการปวดรุนแรง เช่น ไมเกรน(migrain) ปลายประสาทใบหน้าอักเสบ (trigerminal nerve pain) เป็นต้น
     </label>
   </div>
   <div class="form-group form-check">
@@ -162,23 +166,23 @@
   <b>วันที่ประสงค์เข้าคัดกรอง</b>   
   <div class="form-group form-check">
     <input type="radio" class="form-check-input" id="screening1" value="2019-11-4" name="screening" required checked="checked">
-    <label class="form-check-label text-dark" for="screening1">วันที่ 4 พฤศจิกายน 2562 <i id="4" class="text-danger"></i></label>
+    <label class="form-check-label text-dark" id="label-1" for="screening1">วันที่ 4 พฤศจิกายน 2562 <i id="s1" class="text-success">xxx</i></label>
   </div>
   <div class="form-group form-check">
     <input type="radio" class="form-check-input" id="screening2" value="2019-11-5" name="screening" required>
-    <label class="form-check-label text-dark" for="screening2">วันที่ 5 พฤศจิกายน 2562 <i id="5" class="text-danger"></i></label>
+    <label class="form-check-label text-dark" id="label-2" for="screening2">วันที่ 5 พฤศจิกายน 2562 <i id="s2" class="text-success">xxx</i></label>
   </div>
   <div class="form-group form-check">
     <input type="radio" class="form-check-input" id="screening3" value="2019-11-6" name="screening" required>
-    <label class="form-check-label text-dark" for="screening3">วันที่ 6 พฤศจิกายน 2562 <i id="6" class="text-danger"></i></label>
+    <label class="form-check-label text-dark" id="label-3" for="screening3">วันที่ 6 พฤศจิกายน 2562 <i id="s3" class="text-success">xxx</i></label>
   </div>
   <div class="form-group form-check">
     <input type="radio" class="form-check-input" id="screening4" value="2019-11-7" name="screening" required>
-    <label class="form-check-label text-dark" for="screening4">วันที่ 7 พฤศจิกายน 2562 <i id="7" class="text-danger"></i></label>
+    <label class="form-check-label text-dark" id="label-4" for="screening4">วันที่ 7 พฤศจิกายน 2562 <i id="s4" class="text-success">xxx</i></label>
   </div>
   <div class="form-group form-check">
     <input type="radio" class="form-check-input" id="screening5" value="2019-11-8" name="screening" required>
-    <label class="form-check-label text-dark" for="screening5">วันที่ 8 พฤศจิกายน 2562 <i id="8" class="text-danger"></i></label>
+    <label class="form-check-label text-dark" id="label-5" for="screening5">วันที่ 8 พฤศจิกายน 2562 <i id="s5" class="text-success">xxx</i></label>
   </div> 
   <!-- end -->
   <button type="submit" class="btn btn-primary">Submit</button>
@@ -194,152 +198,6 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 
-  <script type="text/javascript">
-  $( document ).ready(function() {
-      $("form").submit(function(event){     
-        let field = $( this ).serializeArray();        
-        let obj = {};
-        jQuery.each(field, function(i, item){
-          if (obj[item.name] === undefined) { // New
-            obj[item.name] = item.value || '';
-          } else {                            // Existing
-              if (!obj[item.name].push) {
-                  obj[item.name] = [obj[item.name]];
-              }
-              obj[item.name].push(item.value || '');
-          }
-        });   
-
-        //console.log(obj);
-
-        jQuery.ajax({
-          cache: false,
-          url: "save.php",
-          data: field,
-          dataType: "json",
-          type:"POST",
-          //contentType: "application/json; charset=utf-8",
-          success: function(data){
-            console.log(data);
-          },
-          error:function(data){
-            console.log(data.responseJSON.message);
-            Swal.fire({
-              title: 'Error!',
-              text: data.responseJSON.message,
-              type: 'error',
-              confirmButtonText: 'Close'
-          });
-          }
-        }); 
-        event.preventDefault();
-      });
-
-      $("#cid").keyup(function(){
-        if($(this).val().length == 13){
-          //console.log($(this).val());
-          let id = $(this).val();
-          let sum = 0;
-          for(i=0; i < 12; i++){
-            sum += parseFloat(id.charAt(i))*(13-i);
-          }          
-          if((11-(sum%11))%10 !== parseFloat(id.charAt(12))){
-              //ถ้าเลขบัตรประชาชนไม่ถูก border: 1px solid #dc3545;
-              $(this).css("border","2px solid #dc3545");
-            }else{
-              $(this).css("border","2px solid #28a745");
-            }
-        }
-      });
-
-      let day = "";
-      let month = "";      
-
-      $("#day").keyup(function(){
-        let val = $(this).val();
-        if(val > 31 || val === '0'){
-          $(this).val('');
-          $($(this).popover('toggle'));
-        }else{
-          $($(this).popover('hide'));
-          day = $(this).val();
-        }
-      });
-
-      $("#month").keyup(function(){
-        let val = $(this).val();
-        if(val > 12 || val === '0'){
-          $(this).val('');
-          $($(this).popover('toggle'));
-        }else{
-          $($(this).popover('hide'));
-          month = $(this).val();
-        }
-      });
-      $("#year").keyup(function(){ //2537,2464
-        let val = $(this).val();
-        if(val.length > 4 || val === '0') $(this).val('');
-        if(!((val >= $(this).attr('min')) && (val <= $(this).attr('max')))){          
-          $($(this).popover('toggle'));
-        }else{          
-          $($(this).popover('hide'));          
-            let age = new Date($(this).val() - 543, month, day);          
-            $('#age').text(getAge(age));          
-        }
-      });
-  });
-
-  function getAge(dateString) {
-    var today = new Date();
-    var DOB = new Date(dateString);
-    var totalMonths = (today.getFullYear() - DOB.getFullYear()) * 12 + today.getMonth() - DOB.getMonth();
-    totalMonths += today.getDay() < DOB.getDay() ? -1 : 0;
-    var years = today.getFullYear() - DOB.getFullYear();
-    if (DOB.getMonth() > today.getMonth())
-        years = years - 1;
-    else if (DOB.getMonth() === today.getMonth())
-        if (DOB.getDate() > today.getDate())
-            years = years - 1;
-
-    var days;
-    var months;
-
-    if (DOB.getDate() > today.getDate()) {
-        months = (totalMonths % 12);
-        if (months == 0)
-            months = 11;
-        var x = today.getMonth();
-        switch (x) {
-            case 1:
-            case 3:
-            case 5:
-            case 7:
-            case 8:
-            case 10:
-            case 12: {
-                var a = DOB.getDate() - today.getDate();
-                days = 31 - a;
-                break;
-            }
-            default: {
-                var a = DOB.getDate() - today.getDate();
-                days = 30 - a;
-                break;
-            }
-        }
-
-    }
-    else {
-        days = today.getDate() - DOB.getDate();
-        if (DOB.getMonth() === today.getMonth())
-            months = (totalMonths % 12);
-        else
-            months = (totalMonths % 12) + 1;
-    }
-    var age = years + ' ปี ' + months + ' เดือน ' + days + ' วัน';
-    return age;
-}
-
-</script>
+  <script type="text/javascript" src="script.js"></script>
 
 </body>

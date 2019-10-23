@@ -1,7 +1,15 @@
 <?php
+header('Content-Type: Application/json; charset=utf8');
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: *');
+header('Access-Control-Allow-Headers: *');
+
 require 'dbconfig.php';
 
 $data = json_decode(json_encode($_POST));
+//print_r($_REQUEST);
+//$data = json_decode($_REQUEST);
+
 
 
 $sql        = 'SELECT count(*) AS total FROM cannabis WHERE screening = "'.$data->screening.'"';
@@ -11,19 +19,26 @@ $result     = mysqli_fetch_object($query);
 if($result->total > 20){
     http_response_code(400);
     exit(json_encode(['message'=>'วันที่ประสงค์เข้าคัดกรอง เต็ม 200 คนแล้ว กรุณาเลือกวันใหม่']));
+}elseif(!checkCID($data->cid)){
+    http_response_code(400);
+    exit(json_encode(["message"=> "รหัสบัตรประชาชนไม่ถูกต้อง"]));
+}elseif(empty($data->firstname)){
+    http_response_code(400);
+    exit(json_encode(["message"=> "ชื่อ- สกุล ต้องไม่ว่างเปล่า"]));
 }
 
-$query  = 'INSERT INTO cannabis(firstname,lastname,cid,birthday_en,disease,screening) VALUES(?,?,?,?,?,?)';
+$query  = 'INSERT INTO cannabis(firstname,lastname,cid,birthday_en,disease,screening,mobile) VALUES(?,?,?,?,?,?,?)';
 
 $stmt   = mysqli_prepare($conn_db, $query);   
     $birthday = ($data->year - 543)."-".$data->month."-".$data->day;
-    mysqli_stmt_bind_param($stmt, 'ssssss',
+    mysqli_stmt_bind_param($stmt, 'sssssss',
         $data->firstname,
         $data->lastname,
         $data->cid,
         $birthday,
         $data->disease,
-        $data->screening
+        $data->screening,
+        $data->mobile
     );
     mysqli_stmt_execute($stmt);
 
@@ -35,4 +50,11 @@ $stmt   = mysqli_prepare($conn_db, $query);
 
     exit(json_encode(['message'=>'successful.']));
 
-    
+    function checkCID($pid) {
+        if(strlen($pid) != 13) return false;
+           for($i=0, $sum=0; $i<12;$i++)
+           $sum += (int)($pid{$i})*(13-$i);
+           if((11-($sum%11))%10 == (int)($pid{12}))
+           return true; //true
+        return true; //false
+     }
