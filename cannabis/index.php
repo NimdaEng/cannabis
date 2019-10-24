@@ -10,6 +10,39 @@
   </style>
 </html>
 <body>
+<!-- Just an image -->
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#" style="color: red" data-toggle="modal" data-target="#exampleModal">
+    พิมพ์ใบคิวตรวจที่นี้
+    <img src="icons8-print-96.png" width="40" height="40" alt="">
+  </a>
+</nav>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">กรอกเลขบัตรประชาชน</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="firstname"></label>
+          <input type="text" class="form-control" id="queue_print" name="queue_print" placeholder="กรอกเลขบัตรประชาชน" required  value="">    
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">พิมพ์ใบคิว</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="container"> 
 <div class="jumbotron">
   <h1 class="display-4">ลงทะเบียนเข้าร่วม โครงการวิจัยน้ำมันกัญชา <b class="text-danger">เฟสที่ 1</b> อ.เดชา ศิริภัทร</h1>
@@ -88,8 +121,7 @@
     <label class="form-check-label">
       <input class="form-check-input" type="checkbox" id="accept"> ข้าพเจ้าได้อ่านครบถ้วนแล้ว
     </label>
-  </div>
-  <a class="btn btn-success btn-lg" href="#" role="button">อ่านแล้ว</a>
+  </div> 
 </div>
 
 <div class="line-bottom">
@@ -166,28 +198,35 @@
   <b>วันที่ประสงค์เข้าคัดกรอง</b>   
   <div class="form-group form-check">
     <input type="radio" class="form-check-input" id="screening1" value="2019-11-4" name="screening" required checked="checked">
-    <label class="form-check-label text-dark" id="label-1" for="screening1">วันที่ 4 พฤศจิกายน 2562 <i id="s1" class="text-success">xxx</i></label>
+    <label class="form-check-label text-dark" id="label-1" for="screening1">วันที่ 4 พฤศจิกายน 2562 
+      <i id="s1" class="text-success"></i></label>
   </div>
   <div class="form-group form-check">
     <input type="radio" class="form-check-input" id="screening2" value="2019-11-5" name="screening" required>
-    <label class="form-check-label text-dark" id="label-2" for="screening2">วันที่ 5 พฤศจิกายน 2562 <i id="s2" class="text-success">xxx</i></label>
+    <label class="form-check-label text-dark" id="label-2" for="screening2">วันที่ 5 พฤศจิกายน 2562 
+      <i id="s2" class="text-success"></i></label>
   </div>
   <div class="form-group form-check">
     <input type="radio" class="form-check-input" id="screening3" value="2019-11-6" name="screening" required>
-    <label class="form-check-label text-dark" id="label-3" for="screening3">วันที่ 6 พฤศจิกายน 2562 <i id="s3" class="text-success">xxx</i></label>
+    <label class="form-check-label text-dark" id="label-3" for="screening3">วันที่ 6 พฤศจิกายน 2562 
+      <i id="s3" class="text-success"></i></label>
   </div>
   <div class="form-group form-check">
     <input type="radio" class="form-check-input" id="screening4" value="2019-11-7" name="screening" required>
-    <label class="form-check-label text-dark" id="label-4" for="screening4">วันที่ 7 พฤศจิกายน 2562 <i id="s4" class="text-success">xxx</i></label>
+    <label class="form-check-label text-dark" id="label-4" for="screening4">วันที่ 7 พฤศจิกายน 2562 
+      <i id="s4" class="text-success"></i></label>
   </div>
   <div class="form-group form-check">
     <input type="radio" class="form-check-input" id="screening5" value="2019-11-8" name="screening" required>
-    <label class="form-check-label text-dark" id="label-5" for="screening5">วันที่ 8 พฤศจิกายน 2562 <i id="s5" class="text-success">xxx</i></label>
+    <label class="form-check-label text-dark" id="label-5" for="screening5">วันที่ 8 พฤศจิกายน 2562 
+      <i id="s5" class="text-success"></i></label>
   </div> 
   <!-- end -->
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 <br><br>
+
+<embed id="pdf" src="" frameborder="0" width="100%" height="400px">
 
 
 

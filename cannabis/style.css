@@ -17,6 +17,10 @@
     color:#000000;
     font-weight: 600;
   }
+  .navbar-brand{
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
   .line-bottom{    
     width: 100%;
     border-bottom: 2px solid #ff8000;

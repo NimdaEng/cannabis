@@ -3,7 +3,8 @@ $( document ).ready(function() {
     updateDateScreen();
     
 
-    $("form").submit(function(event){     
+    $("form").submit(function(event){  
+        event.preventDefault();   
       let field = $( this ).serializeArray();        
       let obj = {};
       jQuery.each(field, function(i, item){
@@ -28,8 +29,12 @@ $( document ).ready(function() {
                 title: 'บันทึกสำเร็จ',
                 text: data.message,
                 type: 'success',
-                confirmButtonText: 'Close'
-            });
+                confirmButtonText: 'พิมพ์เอกสาร'                
+            }).then((result)=>{
+                if(result.value){
+                    window.open('http://localhost:8000/export.php?cid='+data.cid+'&screening='+data.screening, '_blank');
+                }
+            });            
         },
         error:function(data){
           //console.log(data.responseJSON.message);
@@ -40,8 +45,7 @@ $( document ).ready(function() {
             confirmButtonText: 'Close'
         });
         }
-      }); 
-      event.preventDefault();
+      });       
     });
 
     $("#accept").on('click', function() {

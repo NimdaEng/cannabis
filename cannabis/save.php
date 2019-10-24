@@ -1,8 +1,5 @@
 <?php
-header('Content-Type: Application/json; charset=utf8');
-header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Methods: *');
-header('Access-Control-Allow-Headers: *');
+
 
 require 'dbconfig.php';
 
@@ -10,18 +7,16 @@ $data = json_decode(json_encode($_POST));
 //print_r($_REQUEST);
 //$data = json_decode($_REQUEST);
 
-
-
 $sql        = 'SELECT count(*) AS total FROM cannabis WHERE screening = "'.$data->screening.'"';
 $query      = mysqli_query($conn_db, $sql);
 $result     = mysqli_fetch_object($query);
 //echo $result->total;
-if($result->total > 20){
+if($result->total > 200){
     http_response_code(400);
     exit(json_encode(['message'=>'วันที่ประสงค์เข้าคัดกรอง เต็ม 200 คนแล้ว กรุณาเลือกวันใหม่']));
 }elseif(!checkCID($data->cid)){
     http_response_code(400);
-    exit(json_encode(["message"=> "รหัสบัตรประชาชนไม่ถูกต้อง"]));
+    exit(json_encode(["message"=> "รหัสบัตรประชาชนไม่ถูกต้องตรวจสอบอีกครั้ง"]));
 }elseif(empty($data->firstname)){
     http_response_code(400);
     exit(json_encode(["message"=> "ชื่อ- สกุล ต้องไม่ว่างเปล่า"]));
@@ -47,8 +42,9 @@ $stmt   = mysqli_prepare($conn_db, $query);
         http_response_code(400);
         exit(json_encode(['message' => $error_message]));
     }
+   
+    exit(json_encode(['message'=>'successful.','screening'=>$data->screening, 'cid'=>$data->cid]));
 
-    exit(json_encode(['message'=>'successful.']));
 
     function checkCID($pid) {
         if(strlen($pid) != 13) return false;
