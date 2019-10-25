@@ -52,5 +52,5 @@ $stmt   = mysqli_prepare($conn_db, $query);
            $sum += (int)($pid{$i})*(13-$i);
            if((11-($sum%11))%10 == (int)($pid{12}))
            return true; //true
-        return true; //false
+        return false; //false
      }

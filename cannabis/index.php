@@ -11,16 +11,18 @@
 </html>
 <body>
 <!-- Just an image -->
-<nav class="navbar navbar-light bg-light">
-  <a class="navbar-brand" href="#" style="color: red" data-toggle="modal" data-target="#exampleModal">
+<nav id="navbar" class="navbar bg-light">
+  <div id="show-print" class="sticky">
+  <a class="navbar-brand" href="javascript:void(0)" style="color: red" data-toggle="modal" data-target="#print-queue">
     พิมพ์ใบคิวตรวจที่นี้
     <img src="icons8-print-96.png" width="40" height="40" alt="">
   </a>
+  </div>
 </nav>
 
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="print-queue" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -32,12 +34,12 @@
       <div class="modal-body">
         <div class="form-group">
           <label for="firstname"></label>
-          <input type="text" class="form-control" id="queue_print" name="queue_print" placeholder="กรอกเลขบัตรประชาชน" required  value="">    
+          <input type="text" class="form-control" id="cid_print" name="cid_print" placeholder="กรอกเลขบัตรประชาชน" required  value="">    
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">พิมพ์ใบคิว</button>
+        <button type="button"  class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" aria-label="Close" onclick="return printQueue()">พิมพ์ใบคิว</button>
       </div>
     </div>
   </div>

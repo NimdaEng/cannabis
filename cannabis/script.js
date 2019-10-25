@@ -1,7 +1,6 @@
 $( document ).ready(function() {
-    
-    updateDateScreen();
-    
+        
+    updateDateScreen();    
 
     $("form").submit(function(event){  
         event.preventDefault();   
@@ -32,7 +31,7 @@ $( document ).ready(function() {
                 confirmButtonText: 'พิมพ์เอกสาร'                
             }).then((result)=>{
                 if(result.value){
-                    window.open('http://localhost:8000/export.php?cid='+data.cid+'&screening='+data.screening, '_blank');
+                    window.open('/export.php?cid='+data.cid+'&screening='+data.screening, '_blank');
                 }
             });            
         },
@@ -274,4 +273,9 @@ function getAge(dateString) {
   }
   var age = years + ' ปี ' + months + ' เดือน ' + days + ' วัน';
   return age;
+}
+
+function printQueue(){
+
+    window.open('/export.php?cid='+$("#cid_print").val(), '_blank');
 }
