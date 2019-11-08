@@ -28,3 +28,30 @@ WHERE screening ='2019-11-4'
 ORDER BY create_at) AS q 
 ON q.id = pt.id
 WHERE pt.cid ='1111111111112'
+
+
+
+
+@echo off
+ 
+CLS 
+ 
+SET backuptime=%DATE:~10,4%-%DATE:~7,2%-%DATE:~4,2%-%TIME:~0,2%-%TIME:~3,2%
+ 
+echo %backuptime%
+ 
+echo Running dump ...
+ 
+set 7zip_path=
+ 
+"C:\xampp\mysql\bin\mysqldump.exe" --host="localhost" --port="3306" --user="root" --password="" --databases test -Q --result-file="C:\xampp\mysql\data\bk_%backuptime%.sql" rapiddev
+ 
+echo Zipping ...
+ 
+"C:\Program Files\7-Zip\7z.exe" a -tzip "C:\xampp\mysql\data\bk_%backuptime%.zip" "C:\xampp\mysql\data\bk_%backuptime%.sql"
+ 
+echo Deleting the SQL file ...
+ 
+del "C:\xampp\mysql\data\bk_%backuptime%.sql"
+ 
+echo Done!
